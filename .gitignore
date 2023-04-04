@@ -1,0 +1,6 @@
+# python cache
+__pycache__/
+
+# auxiliary files
+.vscode/
+.ipynb_checkpoints

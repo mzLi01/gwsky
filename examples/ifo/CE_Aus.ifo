@@ -1,0 +1,13 @@
+# The proposed Cosmic Explorer located at the site of LIGO Hanford.
+# LIGO-T980044-10
+# https://dcc.ligo.org/LIGO-P1600143/public
+name = 'CE_Aus'
+power_spectral_density = PowerSpectralDensity(psd_file='CE_psd.txt')
+minimum_frequency = 5
+maximum_frequency = 5000
+length = 40
+latitude = -31.5127
+longitude = 115.7375
+elevation = 0
+xarm_azimuth = 90
+yarm_azimuth = 180
