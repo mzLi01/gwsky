@@ -69,7 +69,7 @@ class GWCatalog:
             ra, dec, weights = self.get_source_position(snr_threshold, [weights_col])
 
         calc_lms = {(l, abs(m)) for l, m in lms}
-        modes: SHModes = {spherical_harmonic_modes(
+        modes: SHModes = {(l, m): spherical_harmonic_modes(
             ra, dec, l=l, m=m, weights=weights, ra_dec=True) for l, m in calc_lms}
         for l, m in lms:
             if m < 0:
