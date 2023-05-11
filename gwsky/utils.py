@@ -93,6 +93,9 @@ def plot_hp_map(hp_map: np.ndarray, detectors: Optional[List[Dict]] = None,
                 fig: Optional[plt.Figure] = None, label: str = '',
                 grid_on: bool = True, grid_kwargs: Optional[Dict] = None,
                 detector_kwargs: Optional[Dict] = None, **kwargs):
+    if detectors is None:
+        detectors = []
+
     plot_kwargs = {'flip': 'geo'}
     plot_kwargs.update(kwargs)
 

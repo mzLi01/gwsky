@@ -193,7 +193,7 @@ class Result:
     def _get_converter_func(self, converter_gen: Optional[ConverterGen] = None) -> ConverterFunc:
         if converter_gen is None:
             converter_gen = NoConvert()
-        elif isinstance(converter_gen, ParameterConverter):
+        if isinstance(converter_gen, ParameterConverter):
             def converter_func(p: ParameterDict):
                 return converter_gen
         else:
